@@ -1,4 +1,4 @@
-import MovieCard from './MovieCard';
+import MovieCard from './movie-card';
 import { Movie } from '@/app/data/colors';
 
 interface MovieGridProps {

@@ -1,6 +1,6 @@
 import { colorsData } from '@/app/data/colors';
-import ColorHeader from '@/app/components/ColorHeader';
-import MovieGrid from '@/app/components/MovieGrid';
+import ColorHeader from '@/app/components/color-header';
+import MovieGrid from '@/app/components/movie-grid';
 
 export default async function ColorPage({ 
   params 

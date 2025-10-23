@@ -16,7 +16,7 @@ export default function ColorHeader({
         {name}
       </h1>
 
-      {/* Descrição editorial */}
+      {/* Descrição */}
       <p className="movie-description max-w-4xl">
         <span className="font-bold" style={{ color: hexColor }}>O {name.toLowerCase()}</span> {description}
       </p>
