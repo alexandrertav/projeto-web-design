@@ -7,8 +7,15 @@
 4. [Estrutura da Aplicação](#estrutura-da-aplicação)
 5. [Componentes](#componentes)
 6. [Dados](#dados)
-7. [Fluxo de Navegação](#fluxo-de-navegação)
-8. [Estilos e Design](#estilos-e-design)
+7. [Estilos e Design](#estilos-e-design)
+8. [Fluxo de Navegação](#fluxo-de-navegação)
+9. [Padrões de Design Utilizados](#padrões-de-design-utilizados)
+10. [Como Executar](#como-executar)
+11. [Como Adicionar Novas Cores](#como-adicionar-novas-cores)
+12. [Hierarquia de Estilos](#hierarquia-de-estilos)
+13. [Conceitos-chave do Next.js Usados](#conceitos-chave-do-nextjs-usados)
+14. [Recursos de Aprendizado](#recursos-de-aprendizado)
+15. [Licença e Créditos](#licença-e-créditos)
 
 ---
 
@@ -776,57 +783,6 @@ const colors: ColorData[] = [
 ### 5. **Client vs Server**
 - `'use client'`: Interatividade, hooks
 - Sem diretiva: Server Component (padrão)
-
----
-
-## 📊 Performance
-
-### Otimizações Implementadas
-
-1. **Images**:
-   - Next/Image com lazy loading
-   - Placeholder em caso de erro
-   - Sizes responsivos
-
-2. **Fonts**:
-   - Preload automático
-   - Font display: swap
-
-3. **CSS**:
-   - Tailwind purge automático
-   - Classes não usadas removidas no build
-
-4. **JavaScript**:
-   - Code splitting automático por rota
-   - Server Components reduzem bundle
-
----
-
-## 🧪 Possíveis Melhorias Futuras
-
-### Funcionalidades
-- [ ] Sistema de busca de cores
-- [ ] Filtro por emoção/sentimento
-- [ ] Mais filmes por cor
-- [ ] Sistema de favoritos
-- [ ] Share social
-
-### Performance
-- [ ] Implementar ISR (Incremental Static Regeneration)
-- [ ] Adicionar loading states
-- [ ] Skeleton screens
-- [ ] Image blur placeholders
-
-### UX
-- [ ] Transições de página suaves
-- [ ] Animações de entrada/saída
-- [ ] Toast notifications
-- [ ] Modo claro/escuro
-
-### Dados
-- [ ] CMS headless (Sanity/Contentful)
-- [ ] Banco de dados (PostgreSQL)
-- [ ] API própria
 
 ---
 
