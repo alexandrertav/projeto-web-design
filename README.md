@@ -1,21 +1,21 @@
 # 🎨 Roadmap do Projeto - Psicologia das Cores no Cinema
 
 ## 📋 Índice
-1. [Visão Geral](#visão-geral)
-2. [Arquitetura do Projeto](#arquitetura-do-projeto)
-3. [Arquivos de Configuração](#arquivos-de-configuração)
-4. [Estrutura da Aplicação](#estrutura-da-aplicação)
-5. [Componentes](#componentes)
-6. [Dados](#dados)
-7. [Estilos e Design](#estilos-e-design)
-8. [Fluxo de Navegação](#fluxo-de-navegação)
-9. [Padrões de Design Utilizados](#padrões-de-design-utilizados)
-10. [Como Executar](#como-executar)
-11. [Como Adicionar Novas Cores](#como-adicionar-novas-cores)
-12. [Hierarquia de Estilos](#hierarquia-de-estilos)
-13. [Conceitos-chave do Next.js Usados](#conceitos-chave-do-nextjs-usados)
-14. [Recursos de Aprendizado](#recursos-de-aprendizado)
-15. [Licença e Créditos](#licença-e-créditos)
+1. [Visão Geral](#-visão-geral)
+2. [Arquitetura do Projeto](#️-arquitetura-do-projeto)
+3. [Arquivos de Configuração](#️-arquivos-de-configuração)
+4. [Estrutura da Aplicação](#-estrutura-da-aplicação)
+5. [Componentes](#-componentes)
+6. [Dados](#-dados)
+7. [Estilos e Design](#-estilos-e-design)
+8. [Fluxo de Navegação](#-fluxo-de-navegação)
+9. [Padrões de Design Utilizados](#-padrões-de-design-utilizados)
+10. [Como Executar](#-como-executar)
+11. [Como Adicionar Novas Cores](#-como-adicionar-novas-cores)
+12. [Hierarquia de Estilos](#-hierarquia-de-estilos)
+13. [Conceitos-chave do Next.js Usados](#-conceitos-chave-do-nextjs-usados)
+14. [Recursos de Aprendizado](#-recursos-de-aprendizado)
+15. [Licença e Créditos](#-licença-e-créditos)
 
 ---
 
