@@ -6,103 +6,123 @@ interface ConcentricBackgroundProps {
 
 export default function ConcentricBackground({ color }: ConcentricBackgroundProps) {
   return (
-    <div className="fixed inset-0 z-0 overflow-hidden bg-black">
-      {/* Base escura */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+    <div className="fixed inset-0 z-0 overflow-hidden bg-black">    
 
-      {/* Círculos concêntricos */}
+      {/* Camadas concêntricas de vermelho vivo - ondas/vibrações */}
       <div className="absolute inset-0 flex items-center justify-center">
-        {/* Círculo 1 - Centro brilhante */}
+        {/* Camada 1 - mais próxima do centro - vermelho intenso */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '150px',
-            height: '150px',
+            width: '420px',
+            height: '420px',
             background: `radial-gradient(circle, ${color}80 0%, ${color}40 50%, transparent 100%)`,
-            boxShadow: `0 0 100px ${color}60`,
-            animation: 'pulse-slow 4s ease-in-out infinite'
+            boxShadow: 'inset 0 0 100px rgba(51, 14, 14, 0.5)',
+            animationDuration: '5s'
           }}
         />
         
-        {/* Círculo 2 */}
+        {/* Camada 2 - vermelho vivo */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '350px',
-            height: '350px',
-            background: `radial-gradient(circle, transparent 20%, ${color}50 40%, ${color}25 60%, transparent 100%)`,
-            animation: 'pulse-slow 5s ease-in-out infinite',
-            animationDelay: '0.5s'
+            width: '680px',
+            height: '680px',
+            background: `radial-gradient(circle, transparent 20%, ${color}75 40%, ${color}35 60%, transparent 100%)`,
+            animationDuration: '10s'
           }}
         />
         
-        {/* Círculo 3 */}
+        {/* Camada 3 */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '550px',
-            height: '550px',
-            background: `radial-gradient(circle, transparent 30%, ${color}40 45%, ${color}20 65%, transparent 100%)`,
-            animation: 'pulse-slow 6s ease-in-out infinite',
-            animationDelay: '1s'
+            width: '940px',
+            height: '940px',
+            background: `radial-gradient(circle, transparent 30%, ${color}65 45%, ${color}28 65%, transparent 100%)`,
+            animationDuration: '5s'
           }}
         />
         
-        {/* Círculo 4 */}
+        {/* Camada 4 */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '750px',
-            height: '750px',
-            background: `radial-gradient(circle, transparent 35%, ${color}35 48%, ${color}18 68%, transparent 100%)`,
-            animation: 'pulse-slow 7s ease-in-out infinite',
-            animationDelay: '1.5s'
+            width: '1200px',
+            height: '1200px',
+            background: `radial-gradient(circle, transparent 35%, ${color}55 48%, ${color}22 68%, transparent 100%)`,
+            animationDuration: '5s'
           }}
         />
         
-        {/* Círculo 5 */}
+        {/* Camada 5 */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '950px',
-            height: '950px',
-            background: `radial-gradient(circle, transparent 40%, ${color}30 50%, ${color}15 70%, transparent 100%)`,
-            animation: 'pulse-slow 8s ease-in-out infinite',
-            animationDelay: '2s'
+            width: '1460px',
+            height: '1460px',
+            background: `radial-gradient(circle, transparent 40%, ${color}45 50%, ${color}18 70%, transparent 100%)`,
+            animationDelay: '1.5s',
+            animationDuration: '10s'
           }}
         />
         
-        {/* Círculo 6 - Mais externo */}
+        {/* Camada 6 - borda externa - vermelho mais escuro */}
         <div 
-          className="absolute rounded-full"
+          className="absolute rounded-full animate-pulse-slow"
           style={{
-            width: '1150px',
-            height: '1150px',
-            background: `radial-gradient(circle, transparent 42%, ${color}25 52%, ${color}12 72%, transparent 100%)`,
-            animation: 'pulse-slow 9s ease-in-out infinite',
-            animationDelay: '2.5s'
+            width: '1750px',
+            height: '1750px',
+             background: `radial-gradient(circle, transparent 42%, ${color}35 52%, ${color}15 72%, transparent 100%)`,
+            animationDelay: '2s',
+            animationDuration: '20s'
           }}
         />
       </div>
 
-      {/* Efeito de grão/textura por cima */}
-      <div 
-        className="absolute inset-0 opacity-20 mix-blend-overlay pointer-events-none"
-        style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20700%20700'%20width='700'%20height='700'%20opacity='1'%3E%3Cdefs%3E%3Cfilter%20id='nnnoise-filter'%20x='-20%25'%20y='-20%25'%20width='140%25'%20height='140%25'%20filterUnits='objectBoundingBox'%20primitiveUnits='userSpaceOnUse'%20color-interpolation-filters='linearRGB'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.05'%20numOctaves='4'%20seed='15'%20stitchTiles='stitch'%20/%3E%3CfeSpecularLighting%20surfaceScale='11'%20specularConstant='1.1'%20specularExponent='20'%20lighting-color='%23d0021b'%20x='0%25'%20y='0%25'%20width='100%25'%20height='100%25'%20in='%20turbulence'%20result='specularLighting'%3E%3CfeDistantLight%20azimuth='3'%20elevation='93'%3E%3C/feDistantLight%3E%3C/feSpecularLighting%3E%3CfeColorMatrix%20type='saturate'%20values='0'%20x='0%25'%20y='0%25'%20width='100%25'%20height='100%25'%20in='='specularLighting'/%3E%3C/filter%3E%3C/defs%3E%3Crect%20width='700'%20height='700'%20fill='none'%20/%3E%3Crect%20width='700'%20height='700'%20fill='%23d0021b'%20filter='url(%23nnnoise-filter)'/%3E%3C/svg%3E")`,
-            backgroundSize: '200px 200px',
-            opacity: 0.15
-          }}
-      />
-
-      {/* Vinheta nas bordas */}
-      <div 
+        {/* Gradiente de borda - vermelho intenso para preto MUITO profundo */}
+        <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `radial-gradient(ellipse at center, transparent 20%, ${color}15 60%, black 100%)`
+          background: 'radial-gradient(ellipse at center, transparent 0%, transparent 20%, rgba(139,0,0,0.2) 45%, #8b0000 60%, #5c0000 70%, #2d0000 80%, #0f0000 90%, #000000 100%)'
+        }}
+      />
+      
+      {/* Intensificação do vermelho nas bordas internas - com transição para preto */}
+      <div 
+        className="absolute inset-0 pointer-events-none animate-pulse-slow"
+        style={{
+          background: 'radial-gradient(ellipse at center, transparent 20%, rgba(220,20,60,0.25) 38%, rgba(139,0,0,0.5) 52%, rgba(60,0,0,0.7) 66%, rgba(15,0,0,0.85) 78%, transparent 88%)',
+          animationDelay: '1s'
+        }}
+      />
+
+
+      {/* Textura granulada*/}
+      <div 
+        className="absolute inset-0 opacity-100 mix-blend-overlay pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.95'/%3E%3C/svg%3E")`,
+          backgroundSize: '100px 100px',
+        }}
+      />
+      
+      {/* Overlay final para ajuste de profundidade - preto profundo */}
+      <div 
+        className="absolute inset-0 pointer-events-none mix-blend-overlay"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.95) 100%)'
+        }}
+      />
+      
+      {/* Efeito hipnótico - energia irradiando do centro */}
+      <div 
+        className="absolute inset-0 pointer-events-none animate-pulse-slow"
+        style={{
+          background: 'radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 15%, rgba(220,20,60,0.1) 30%, transparent 50%)',
+          animationDelay: '2s'
         }}
       />
     </div>
   );
 }
-
