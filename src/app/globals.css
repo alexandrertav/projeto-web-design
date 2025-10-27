@@ -64,6 +64,70 @@ body {
   }
 }
 
+/* Animação de fluxo oceânico - movimento lento e profundo */
+@keyframes water-flow {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.03);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Animação de ondulação profunda - expansão muito lenta */
+@keyframes wave-ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+}
+
+/* Animação de corrente oceânica - movimento horizontal lento */
+@keyframes ocean-current {
+  0% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 0.35;
+  }
+  33% {
+    transform: translateX(25px) translateY(-15px) scale(1.02);
+    opacity: 0.55;
+  }
+  66% {
+    transform: translateX(-25px) translateY(15px) scale(0.98);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateX(0) translateY(0) scale(1);
+    opacity: 0.35;
+  }
+}
+
+/* Animação de respiração profunda do oceano - muito lenta */
+@keyframes deep-breath {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.5;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -74,6 +138,22 @@ body {
 
 .animate-pulse-slow {
   animation: pulse-slow 4s ease-in-out infinite;
+}
+
+.animate-water-flow {
+  animation: water-flow 16s ease-in-out infinite;
+}
+
+.animate-wave-ripple {
+  animation: wave-ripple 12s ease-in-out infinite;
+}
+
+.animate-ocean-current {
+  animation: ocean-current 20s ease-in-out infinite;
+}
+
+.animate-deep-breath {
+  animation: deep-breath 18s ease-in-out infinite;
 }
 
 /* Scrollbar customizada */
