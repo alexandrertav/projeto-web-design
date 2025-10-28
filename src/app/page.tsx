@@ -26,32 +26,49 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden bg-black">
+      {/* Gradiente fosco preto */}
+      <div 
+        className="fixed inset-0 z-0"
+        style={{
+          background: 'radial-gradient(ellipse at center, rgba(20,20,30,0.95) 0%, rgba(10,10,15,0.97) 50%, rgba(0,0,0,1) 100%)'
+        }}
+      />
+
       {/* Luz decorativa de fundo */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-5">
         <div className="absolute top-20 left-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
 
-      <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+      {/* Textura granulada */}
+      <div 
+        className="fixed inset-0 opacity-100 mix-blend-overlay pointer-events-none z-10"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.95'/%3E%3C/svg%3E")`,
+          backgroundSize: '120px 120px',
+        }}
+      />
+
+      <main className="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
         {/* Header */}
         <div className="text-center mb-16 sm:mb-24 animate-fade-in-up">
           <div className="inline-flex items-center justify-center gap-3 mb-6">
-            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-purple-400 animate-float" />
-            <Palette className="w-10 h-10 sm:w-12 sm:h-12 text-blue-400" />
-            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-pink-400 animate-float" style={{ animationDelay: '1s' }} />
+            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-purple-200/80 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] animate-float" />
+            <Palette className="w-10 h-10 sm:w-12 sm:h-12 text-blue-200/80 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />
+            <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-pink-200/80 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] animate-float" style={{ animationDelay: '1s' }} />
           </div>
           
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight gradient-text">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             Psicologia das Cores
           </h1>
           
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-gray-200/90 max-w-2xl mx-auto mb-8 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
             Explore como as cores influenciam emoções e narrativas no cinema
           </p>
 
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-300/80">
             <Film className="w-4 h-4" />
             <span>Uma jornada visual através do cinema</span>
           </div>
@@ -77,7 +94,7 @@ export default function Home() {
         </div>
 
          {/* Grade de cores*/}
-         <h2 className="text-2xl font-bold text-center mb-8">Escolha uma cor</h2>
+         <h2 className="text-2xl font-bold text-center mb-8 text-white/90 drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">Escolha uma cor</h2>
          <div className="max-w-4xl mx-auto mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
            <div className="grid grid-cols-5 gap-3 sm:gap-4">
              {colors.map((colorData) => (

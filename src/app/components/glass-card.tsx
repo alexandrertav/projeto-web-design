@@ -30,8 +30,8 @@ export default function GlassCard({
         />
       </div>
 
-      <h3 className="text-white text-lg font-semibold">{title}</h3>
-      <p className="text-gray-300 mt-2 text-sm">{description}</p>
+      <h3 className="text-white text-lg font-semibold drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">{title}</h3>
+      <p className="text-gray-200 mt-2 text-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]">{description}</p>
     </div>
   );
 }
