@@ -66,5 +66,31 @@ export const colorsData: ColorData[] = [
         colorExplanation: 'Nesta cena de Ghost in the Shell, o azul é a cor dominante e atua como espelho da condição existencial da protagonista. O tom frio e artificial que envolve o enquadramento traduz a fusão entre humano e máquina, corpo e consciência, alma e tecnologia. O azul, aqui, não é apenas uma escolha estética futurista, mas uma metáfora visual da solidão e da busca por identidade em um mundo digitalizado. Na psicologia das cores, o azul representa distanciamento, introspecção e racionalidade, mas quando saturado e envolto em tons metálicos, ele ganha um aspecto quase inumano. Esse efeito ressalta a desconexão emocional da personagem — sua humanidade residual em contraste com o ambiente sintético que a cerca. O brilho suave sobre sua pele cria uma sensação de frieza e vulnerabilidade, como se ela existisse entre dois estados: o orgânico e o programado. O fundo, repleto de luzes azuis e cibernéticas, reforça a ideia de um mundo que pulsa com informação, não com vida. O azul, nesse contexto, é o símbolo da alma aprisionada pela tecnologia, da mente que pensa mas não sente, do ser que questiona sua própria natureza. Assim, o uso do azul em Ghost in the Shell transcende o visual futurista: ele traduz o dilema existencial da protagonista — o que resta de humano quando tudo ao redor (e dentro) se torna digital. É uma cor que silencia o calor da emoção e transforma a introspecção em paisagem. '
       }
     ]
+  },
+  {
+    id: 'verde',
+    name: 'Verde',
+    hexColor: '#00FF41',
+    description: 'O verde é a cor da natureza e da renovação, mas também da artificialidade e do digital. Na psicologia das cores, representa tanto o crescimento orgânico quanto a mutação tecnológica — a vida que pulsa na floresta e o código que flui na Matrix.',
+    movies: [
+      {
+        id: 'matrix',
+        title: "Matrix (1999)",
+        image: '/movies/matrix.png',
+        colorExplanation: 'Em Matrix, o verde não é apenas uma cor, é uma linguagem. O código verde que flui pelas telas representa a própria estrutura da realidade simulada — uma cascata de símbolos que revela a natureza artificial do mundo. Na psicologia das cores, o verde está associado ao crescimento e à vida, mas aqui ele ganha um significado invertido: é a vida artificial, o orgânico transformado em digital. O verde fosforescente cria uma atmosfera de estranhamento, sugerindo que algo está fundamentalmente errado com a realidade percebida. Esse tom específico de verde — frio, artificial, quase tóxico — evoca tanto a tela de computadores antigos quanto uma sensação de contaminação. É a cor da verdade oculta, do conhecimento proibido, da consciência que desperta para o horror da ilusão. O verde permeia todo o filme como um filtro que separa o real do simulado, criando uma identidade visual única que se tornou icônica. Ele representa a interface entre humano e máquina, o momento em que Neo aprende a ver além das aparências e enxergar o código por trás da realidade. Assim, o verde em Matrix transcende sua função estética: é o símbolo da revelação, da transformação e da libertação através do conhecimento — mesmo que esse conhecimento seja perturbador.'
+      },
+      {
+        id: 'alien',
+        title: 'Alien: O Oitavo Passageiro (1979)',
+        image: '/movies/alien.png',
+        colorExplanation: 'Em Alien, o verde surge como a cor da vida artificial e do perigo oculto. A iluminação esverdeada que permeia a nave Nostromo cria uma atmosfera de desconforto e tensão constante. Na psicologia das cores, o verde pode representar tanto a natureza quanto a toxicidade, e aqui ele assume seu aspecto mais sinistro. O verde doentio das luzes da nave sugere um ambiente contaminado, onde a vida orgânica está fora de lugar. É a cor dos monitores antigos, da tecnologia que falha, dos sistemas que não podem proteger a tripulação. Esse tom específico de verde — pálido, quase nauseante — amplifica a sensação de claustrofobia e vulnerabilidade. Quando combinado com as sombras profundas, o verde cria um espaço onde o horror pode se esconder em cada canto. A criatura alienígena, com seu sangue ácido e sua natureza biomecânica, parece pertencer a esse espectro cromático — uma forma de vida que existe entre o orgânico e o artificial. O verde também marca o contraste entre o vazio frio do espaço e o calor da vida humana, tornando cada cena mais opressiva. Assim, o verde em Alien não é a cor da natureza reconfortante, mas da natureza pervertida — a vida que não deveria existir, o crescimento que se torna parasita, a renovação que significa morte.'
+      },
+      {
+        id: 'blade-runner',
+        title: 'Blade Runner 2049 (2017)',
+        image: '/movies/blade-runner.png',
+        colorExplanation: 'Em Blade Runner 2049, o verde surge em momentos específicos como símbolo de memória, natureza perdida e esperança frágil. Numa Los Angeles devastada onde a natureza foi quase completamente erradicada, o verde representa o que foi esquecido — a vida orgânica que existiu antes da catástrofe ecológica. Na psicologia das cores, o verde está ligado ao crescimento e à renovação, mas aqui ele aparece como fantasma, uma lembrança holográfica do que o mundo já foi. A iluminação verde em certas cenas cria uma atmosfera de nostalgia tóxica, onde a memória da natureza é tão artificial quanto os replicantes que habitam esse mundo. O verde também marca os espaços de transição — entre o real e o sintético, entre a memória verdadeira e a implantada. Quando K encontra vestígios de verde em sua jornada, eles funcionam como pistas de algo autêntico num mundo de simulacros. A cor assume um caráter quase sagrado, representando a possibilidade de vida genuína em meio à artificialidade total. O contraste entre o verde raro e os laranjas apocalípticos que dominam o filme amplifica seu significado: cada aparição do verde é um momento de pausa, de questionamento, de busca por algo real. Assim, o verde em Blade Runner 2049 é a cor da esperança impossível — a promessa de que ainda pode existir algo natural, algo verdadeiro, algo vivo num mundo que esqueceu o que essas palavras significam.'
+      }
+    ]
   }
 ];

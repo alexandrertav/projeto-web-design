@@ -131,6 +131,43 @@ body {
   }
 }
 
+/* Animações para Verde - Mãe Terra */
+/* Respiração da terra - extremamente lenta e sutil */
+@keyframes earth-breath {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.5;
+  }
+}
+
+/* Crescimento orgânico - muito lento como raízes */
+@keyframes organic-growth {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.03) rotate(0.5deg);
+    opacity: 0.45;
+  }
+}
+
+/* Pulso vital da natureza - quase imperceptível */
+@keyframes nature-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.015);
+    opacity: 0.4;
+  }
+}
+
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
 }
@@ -145,6 +182,19 @@ body {
 
 .animate-water-flow {
   animation: water-flow 16s ease-in-out infinite;
+}
+
+/* Classes de animação para verde - Mãe Terra */
+.animate-earth-breath {
+  animation: earth-breath 20s ease-in-out infinite;
+}
+
+.animate-organic-growth {
+  animation: organic-growth 25s ease-in-out infinite;
+}
+
+.animate-nature-pulse {
+  animation: nature-pulse 30s ease-in-out infinite;
 }
 
 .animate-wave-ripple {
@@ -200,4 +250,217 @@ body {
   line-height: 1.75;
   color: #d1d5db;
   text-align: justify;
+}
+
+/* Rotation */
+.leaf:nth-of-type(n) {
+  transform: rotate(180deg);
+}
+
+/* Keyframe animations */
+@keyframes falling {
+  0% {
+    transform: translate3d(300px, 0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-350px, 100vh, 0) rotate(90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes falling2 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(90deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-400px, 100vh, 0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+@keyframes falling3 {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-20deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-230px, 100vh, 0) rotate(-70deg);
+    opacity: 0;
+  }
+}
+
+/* Raízes e Musgo - Decoração Verde */
+.tree-roots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.15;
+  overflow: hidden;
+}
+
+.root {
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(101, 67, 33, 0.8), rgba(139, 90, 43, 0.6), transparent);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  transform-origin: top center;
+}
+
+.root-1 {
+  bottom: 0;
+  left: 5%;
+  width: 3px;
+  height: 180px;
+  transform: rotate(-15deg);
+  animation: root-grow 8s ease-out infinite;
+}
+
+.root-2 {
+  bottom: 0;
+  left: 15%;
+  width: 4px;
+  height: 220px;
+  transform: rotate(8deg);
+  animation: root-grow 10s ease-out infinite;
+  animation-delay: 2s;
+}
+
+.root-3 {
+  bottom: 0;
+  left: 25%;
+  width: 2px;
+  height: 150px;
+  transform: rotate(-20deg);
+  animation: root-grow 12s ease-out infinite;
+  animation-delay: 4s;
+}
+
+.root-4 {
+  bottom: 0;
+  right: 5%;
+  width: 3px;
+  height: 200px;
+  transform: rotate(12deg);
+  animation: root-grow 9s ease-out infinite;
+  animation-delay: 1s;
+}
+
+.root-5 {
+  bottom: 0;
+  right: 18%;
+  width: 4px;
+  height: 190px;
+  transform: rotate(-10deg);
+  animation: root-grow 11s ease-out infinite;
+  animation-delay: 3s;
+}
+
+.root-6 {
+  bottom: 0;
+  right: 30%;
+  width: 2px;
+  height: 160px;
+  transform: rotate(18deg);
+  animation: root-grow 13s ease-out infinite;
+  animation-delay: 5s;
+}
+
+@keyframes root-grow {
+  0%, 100% {
+    transform: scaleY(1) translateY(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scaleY(1.08) translateY(-5px);
+    opacity: 0.25;
+  }
+}
+
+/* Musgo - textura orgânica */
+.moss-texture {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    to top,
+    rgba(34, 139, 34, 0.3) 0%,
+    rgba(46, 125, 50, 0.25) 30%,
+    rgba(56, 142, 60, 0.15) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
+  opacity: 0.4;
+  animation: moss-breathe 15s ease-in-out infinite;
+}
+
+.moss-patch {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50% 50% 0 0 / 80% 80% 0 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(34, 139, 34, 0.5) 0%,
+    rgba(46, 125, 50, 0.3) 50%,
+    transparent 100%
+  );
+  filter: blur(3px);
+}
+
+.moss-patch-1 {
+  left: 10%;
+  width: 80px;
+  height: 25px;
+  animation: moss-pulse 12s ease-in-out infinite;
+}
+
+.moss-patch-2 {
+  left: 30%;
+  width: 100px;
+  height: 30px;
+  animation: moss-pulse 14s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.moss-patch-3 {
+  right: 15%;
+  width: 90px;
+  height: 28px;
+  animation: moss-pulse 13s ease-in-out infinite;
+  animation-delay: 4s;
+}
+
+.moss-patch-4 {
+  right: 35%;
+  width: 70px;
+  height: 22px;
+  animation: moss-pulse 15s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+@keyframes moss-breathe {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scaleY(1.05);
+  }
+}
+
+@keyframes moss-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
 }
