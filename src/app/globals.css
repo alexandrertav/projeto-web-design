@@ -467,6 +467,116 @@ body {
   }
 }
 
+@keyframes spinWheel {
+  0% {
+    transform: rotate(-18deg) scale(1);
+  }
+  30% {
+    transform: rotate(162deg) scale(1.05);
+  }
+  60% {
+    transform: rotate(522deg) scale(1.15);
+  }
+  100% {
+    transform: rotate(1062deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Animações das camadas concêntricas em espiral */
+@keyframes spiralLayer1 {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(2) rotate(360deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(8) rotate(720deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes spiralLayer2 {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.8) rotate(270deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(6) rotate(630deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes spiralLayer3 {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.6) rotate(180deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(5) rotate(540deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes spiralLayer4 {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.4) rotate(90deg);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(4) rotate(450deg);
+    opacity: 0.4;
+  }
+}
+
+@keyframes spiralLayer5 {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.2) rotate(45deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(3.5) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
