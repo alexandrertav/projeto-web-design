@@ -92,7 +92,7 @@ export default function ColorWheel({ onColorHover, onColorClick, isTransitioning
         <div className="absolute w-[650px] h-[650px] rounded-full border border-white/10" />
       </div>
 
-      {/* Container da roda */}
+      {/* Container da rodaa */}
       <div className="relative flex items-center justify-center">
         {/* Roda cromática com conic-gradient */}
         <div
