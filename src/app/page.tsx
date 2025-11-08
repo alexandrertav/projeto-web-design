@@ -66,13 +66,13 @@ export default function Home() {
       />
 
       {/* Layout Split Screen */}
-      <main className="relative z-20 min-h-screen flex flex-col lg:grid lg:grid-cols-2 gap-4 lg:gap-8">
+      <main className="relative z-20 min-h-screen flex flex-col lg:grid lg:grid-cols-2 gap-0 lg:gap-8">
         {/* Lado Esquerdo - Conteúdo */}
-        <div className="flex flex-col justify-center px-6 sm:px-8 lg:px-16 xl:px-24 py-8 sm:py-12 lg:py-20 order-1 lg:order-1">
+        <div className="flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-12 sm:py-16 md:py-20 lg:py-20 order-1 lg:order-1">
           <div className="max-w-2xl animate-fade-in-up">
             {/* Badge */}
             <div 
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full backdrop-blur-md mb-8 shadow-lg transition-all duration-1000"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full backdrop-blur-md mb-4 sm:mb-6 md:mb-8 shadow-lg transition-all duration-1000"
               style={{
                 backgroundColor: hoveredColor ? `${hoveredColor}30` : 'rgba(255, 255, 255, 0.1)',
                 borderColor: hoveredColor ? `${hoveredColor}50` : 'rgba(255, 255, 255, 0.2)',
@@ -80,12 +80,12 @@ export default function Home() {
                 borderStyle: 'solid'
               }}
             >
-              <Sparkles className="w-4 h-4 text-white" />
-              <span className="text-sm text-white font-medium">Cinema & Psicologia</span>
+              <Sparkles className="w-3 sm:w-4 h-3 sm:h-4 text-white" />
+              <span className="text-xs sm:text-sm text-white font-medium">Cinema & Psicologia</span>
             </div>
 
             {/* Título Principal */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 tracking-tight leading-tight sm:leading-none">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-tight leading-tight">
               <span 
                 className="drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)] transition-colors duration-[1500ms]"
                 style={{
@@ -106,26 +106,26 @@ export default function Home() {
             </h1>
             
             {/* Subtítulo */}
-            <p className="text-base sm:text-lg md:text-xl text-white/70 mb-6 sm:mb-8 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 mb-4 sm:mb-6 md:mb-8 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
               Explore como as cores influenciam emoções e narrativas em filmes icônicos. 
               Uma jornada visual através da linguagem cinematográfica.
             </p>
 
             {/* Instrução */}
-            <div className="flex items-center gap-3 mb-8 sm:mb-10">
+            <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8 md:mb-10">
               <div 
-                className="h-px w-8 sm:w-12 transition-all duration-1000"
+                className="h-px w-6 sm:w-8 md:w-12 transition-all duration-1000"
                 style={{
                   background: hoveredColor 
                     ? `linear-gradient(to right, transparent, ${hoveredColor})` 
                     : 'linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3))'
                 }}
               ></div>
-              <p className="text-sm sm:text-base text-white/60 font-medium">Passe o mouse sobre a roda cromática para explorar</p>
+              <p className="text-xs sm:text-sm md:text-base text-white/60 font-medium">Passe o mouse sobre a roda cromática para explorar</p>
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-10 sm:mt-16">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mt-6 sm:mt-10 md:mt-16">
               <div 
                 className="flex items-start gap-3 p-4 rounded-xl backdrop-blur-md transition-all duration-1000 group"
                 style={{
@@ -141,11 +141,11 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(168, 85, 247, 0.3)'
                   }}
                 >
-                  <Palette className="w-5 h-5 text-white" />
+                  <Palette className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white/95 font-semibold mb-1">Teoria das Cores</h3>
-                  <p className="text-sm text-white/60">Significados psicológicos</p>
+                  <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Teoria das Cores</h3>
+                  <p className="text-xs sm:text-sm text-white/60">Significados psicológicos</p>
                 </div>
               </div>
 
@@ -164,11 +164,11 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(59, 130, 246, 0.3)'
                   }}
                 >
-                  <Film className="w-5 h-5 text-white" />
+                  <Film className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white/95 font-semibold mb-1">Cinema & Arte</h3>
-                  <p className="text-sm text-white/60">Narrativas visuais</p>
+                  <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Cinema & Arte</h3>
+                  <p className="text-xs sm:text-sm text-white/60">Narrativas visuais</p>
                 </div>
               </div>
 
@@ -187,28 +187,28 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(236, 72, 153, 0.3)'
                   }}
                 >
-                  <Sparkles className="w-5 h-5 text-white" />
+                  <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-white/95 font-semibold mb-1">Análise Visual</h3>
-                  <p className="text-sm text-white/60">Cenas icônicas</p>
+                  <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Análise Visual</h3>
+                  <p className="text-xs sm:text-sm text-white/60">Cenas icônicas</p>
                 </div>
               </div>
             </div>
 
             {/* Citação */}
-            <div className="mt-10 sm:mt-16 relative">
-              <div className="absolute -left-2 top-0 text-4xl sm:text-6xl text-white/10 font-serif">&quot;</div>
+            <div className="mt-6 sm:mt-10 md:mt-16 relative">
+              <div className="absolute -left-1 sm:-left-2 top-0 text-3xl sm:text-4xl md:text-6xl text-white/10 font-serif">&quot;</div>
               <blockquote 
-                className="pl-6 sm:pl-8 border-l-2 transition-all duration-1000"
+                className="pl-4 sm:pl-6 md:pl-8 border-l-2 transition-all duration-1000"
                 style={{
                   borderColor: hoveredColor ? `${hoveredColor}60` : 'rgba(255, 255, 255, 0.2)'
                 }}
               >
-                <p className="text-base sm:text-lg text-white/80 italic leading-relaxed mb-2 sm:mb-3">
+                <p className="text-sm sm:text-base md:text-lg text-white/80 italic leading-relaxed mb-1.5 sm:mb-2 md:mb-3">
                   A cor é um meio de exercer influência direta sobre a alma.
                 </p>
-                <footer className="text-xs sm:text-sm text-white/50">
+                <footer className="text-[10px] sm:text-xs md:text-sm text-white/50">
                   — Wassily Kandinsky
                 </footer>
               </blockquote>
@@ -217,7 +217,7 @@ export default function Home() {
         </div>
 
         {/* Lado Direito - Roda Cromática */}
-        <div className="flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12 lg:py-20 animate-fade-in-up order-2 lg:order-2 min-h-[400px] sm:min-h-[500px] lg:min-h-0" style={{ animationDelay: '0.2s' }}>
+        <div className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-20 animate-fade-in-up order-2 lg:order-2 min-h-[350px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-0" style={{ animationDelay: '0.2s' }}>
           <ColorWheel onColorHover={setHoveredColor} />
         </div>
       </main>
