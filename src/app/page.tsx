@@ -249,13 +249,14 @@ export default function Home() {
         <div
           className="fixed inset-0 z-[9999] pointer-events-none"
         >
-          {/* Camadas concêntricas em espiral */}
+          {/* Camadas concêntricas em espiral - irradiando do centro da ColorWheel */}
           <div
-            className="absolute inset-0 flex items-center justify-center"
+            className="absolute flex items-center justify-center lg:left-[75%] left-1/2 lg:top-[55%] top-1/2"
             style={{
               opacity: 1,
               animation: 'fadeOut 0.5s ease-out forwards',
               animationDelay: '2s',
+              transform: 'translate(-50%, -50%)',
             }}
           >
             {/* Camada 1 - Centro */}
