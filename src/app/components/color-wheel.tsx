@@ -91,9 +91,9 @@ export default function ColorWheel({ onColorHover, onColorClick, isTransitioning
             animation: isTransitioning ? 'spinWheel 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards' : 'none',
           }}
         >
-          {/* Círculo branco centrall */}
+          {/* Círculo branco central */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-white to-gray-100 shadow-[inset_0_2px_8px_rgba(0,0,0,0.1)] overflow-hidden"
+            className="color-wheel-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-white to-gray-100 shadow-[inset_0_2px_8px_rgba(0,0,0,0.1)] overflow-hidden"
             style={{
               width: `${centerSize}px`,
               height: `${centerSize}px`,

@@ -14,10 +14,12 @@ export default function Home() {
     isAnimating: boolean;
     color: string | null;
     colorHex: string | null;
+    spiralPosition: { x: number; y: number } | null;
   }>({
     isAnimating: false,
     color: null,
     colorHex: null,
+    spiralPosition: null,
   });
 
   // Aumenta a intensidade da cor gradualmente enquanto hover está ativo
@@ -233,11 +235,27 @@ export default function Home() {
           <ColorWheel 
             onColorHover={setHoveredColor} 
             onColorClick={(colorName, colorHex) => {
-              setTransitionState({
-                isAnimating: true,
-                color: colorName,
-                colorHex: colorHex,
-              });
+              // Captura a posição do centro da ColorWheel no momento do clique
+              const wheelElement = document.querySelector('.color-wheel-center');
+              if (wheelElement) {
+                const rect = wheelElement.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                setTransitionState({
+                  isAnimating: true,
+                  color: colorName,
+                  colorHex: colorHex,
+                  spiralPosition: { x: centerX, y: centerY },
+                });
+              } else {
+                setTransitionState({
+                  isAnimating: true,
+                  color: colorName,
+                  colorHex: colorHex,
+                  spiralPosition: null,
+                });
+              }
             }}
             isTransitioning={transitionState.isAnimating}
           />
@@ -251,11 +269,13 @@ export default function Home() {
         >
           {/* Camadas concêntricas em espiral - irradiando do centro da ColorWheel */}
           <div
-            className="absolute flex items-center justify-center spiral-origin"
+            className="fixed flex items-center justify-center"
             style={{
               opacity: 1,
               animation: 'fadeOut 0.5s ease-out forwards',
               animationDelay: '2s',
+              left: transitionState.spiralPosition ? `${transitionState.spiralPosition.x}px` : '50%',
+              top: transitionState.spiralPosition ? `${transitionState.spiralPosition.y}px` : '50%',
               transform: 'translate(-50%, -50%)',
             }}
           >
