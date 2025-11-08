@@ -152,6 +152,41 @@ export default function ColorWheel({ onColorHover }: ColorWheelProps) {
           </div>
         </div>
 
+        {/* Card informativo estático */}
+        <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 w-64 pointer-events-none z-50">
+          {hoveredColor ? (
+            <div
+              className="px-6 py-4 rounded-xl backdrop-blur-md shadow-2xl border-2 transition-all duration-300 animate-fade-in"
+              style={{
+                backgroundColor: `${colors.find(c => c.name === hoveredColor)?.hex}25`,
+                borderColor: `${colors.find(c => c.name === hoveredColor)?.hex}80`,
+                boxShadow: `0 8px 24px ${colors.find(c => c.name === hoveredColor)?.hex}50`,
+              }}
+            >
+              <div className="text-center">
+                <p
+                  className="text-2xl font-bold mb-1"
+                  style={{
+                    color: colors.find(c => c.name === hoveredColor)?.hex,
+                    textShadow: '0 2px 8px rgba(0,0,0,0.4)',
+                  }}
+                >
+                  {hoveredColor}
+                </p>
+                <p className="text-xs text-white/60 font-medium">
+                  Clique para explorar
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="px-6 py-4 rounded-xl backdrop-blur-md bg-white/5 border border-white/10 transition-all duration-300">
+              <p className="text-center text-sm text-white/40 font-medium">
+                Passe o mouse sobre uma cor
+              </p>
+            </div>
+          )}
+        </div>
+
         {/* Overlay de brilho intenso no hover */}
         {hoveredColor && (
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
