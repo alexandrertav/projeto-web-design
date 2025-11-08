@@ -577,6 +577,25 @@ body {
   }
 }
 
+/* Posicionamento responsivo da espiral */
+.spiral-origin {
+  left: 50%;
+  top: 65%; /* Mobile: ColorWheel está na parte inferior */
+}
+
+@media (min-width: 640px) {
+  .spiral-origin {
+    top: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .spiral-origin {
+    left: 75%;
+    top: 55%; /* Desktop: ColorWheel está na coluna direita */
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

@@ -251,7 +251,7 @@ export default function Home() {
         >
           {/* Camadas concêntricas em espiral - irradiando do centro da ColorWheel */}
           <div
-            className="absolute flex items-center justify-center lg:left-[75%] left-1/2 lg:top-[55%] top-1/2"
+            className="absolute flex items-center justify-center spiral-origin"
             style={{
               opacity: 1,
               animation: 'fadeOut 0.5s ease-out forwards',
