@@ -143,5 +143,135 @@ export const colorsData: ColorData[] = [
         colorExplanation: 'O laranja nessa cena é usado de forma simbólica para expressar tanto a hostilidade quanto a vitalidade do ambiente marciano. Na psicologia das cores, o laranja é a cor da energia, resistência e sobrevivência, e aqui, ele se torna um reflexo direto da luta do protagonista para se manter vivo em um mundo árido e inóspito. A paisagem alaranjada de Marte cria uma atmosfera de isolamento absoluto, transmitindo o calor extremo, a falta de vida e a distância da Terra. Contudo, essa mesma cor também carrega uma força simbólica de esperança e superação: o laranja representa a chama que ainda arde, mesmo em meio ao deserto e à solidão. Visualmente, o contraste entre o tom quente do cenário e o traje do astronauta reforça a tensão entre fragilidade humana e imensidão cósmica. O ambiente é opressivo, mas também vibrante, como se o planeta, apesar de hostil, pulsasse com uma energia primitiva, quase espiritual. Assim, o uso do laranja equilibra desespero e vitalidade: é a cor do perigo, mas também da persistência, simbolizando o calor da vida humana resistindo contra um universo indiferente.'
       }
     ]
+  },
+  {
+    id: 'rosa',
+    name: 'Rosa',
+    hexColor: '#ED09E9',
+    description: 'Na psicologia das cores, o rosa é associado ao afeto, à delicadeza e à empatia, evocando sensações de cuidado, ternura e inocência. É uma cor que suaviza, aproxima e acolhe, mas que, dependendo da saturação e do contexto, também pode expressar artificialidade, excesso ou repressão emocional. O rosa claro costuma representar o amor puro e o romantismo; o rosa intenso pode remeter à energia, à fantasia e ao consumo; enquanto tons rosados em ambientes rígidos ou controlados podem simbolizar uma doçura forçada, quase sufocante, quando a cor tenta mascarar o desconforto.',
+    movies: [
+      {
+        id: 'hotel-budapeste',
+        title: "O Grande Hotel Budapeste (2014)",
+        image: '/movies/grande-hotel-budapeste.png',
+        colorExplanation: 'O rosa pastel domina o universo visual do filme, pintando o hotel e suas embalagens de confeitaria com uma aura de nostalgia e perfeição estética. Esse rosa não é apenas decorativo: ele traduz o mundo idealizado de M. Gustave e de sua era elegante, polida e frágil diante da brutalidade do tempo. Na cena das caixas Mendls, o rosa funciona como um refúgio da ternura, um microcosmo protegido da guerra e da decadência. Mas, ao mesmo tempo, sua suavidade revela o caráter ilusório dessa beleza, o rosa é a cor de um passado que tenta resistir ao colapso.'
+      },
+        {
+        id: 'harry-potter',
+        title: 'harry potter e a ordem da fênix (2014)',
+        image: '/movies/hp-fenix.png',
+        colorExplanation: 'No escritório de Dolores Umbridge, o rosa adquire um sentido oposto: a doçura transformada em controle. Aqui, o tom não é afetuoso, mas opressor e artificial, um verniz de gentileza que esconde autoritarismo. As paredes cobertas de flores, rendas e gatos criam uma estética infantilizada, quase caricata, que disfarça a crueldade da personagem. O rosa, que poderia ser símbolo de amor e empatia, torna-se instrumento de manipulação emocional, um lembrete de como o poder também pode se disfarçar de delicadeza.'
+      },
+      {
+        id: 'blade-rosa',
+        title: 'blade runner 2049 (2017)',
+        image: '/movies/blade-rosa.png',
+        colorExplanation: 'Neste universo futurista e melancólico, o rosa neon não representa carinho, mas simulação e desejo artificial. É o rosa das luzes de propaganda, da sensualidade programada, das emoções fabricadas. A tonalidade vibrante que envolve o holograma e o protagonista cria uma atmosfera de solidão tecnológica: o calor da cor contrasta com o vazio da cena. É o rosa da pós-humanidade, sedutor e sintético, símbolo de uma ternura que já não nasce do humano, mas é projetada por máquinas.'
+      }
+    ]
+  },
+  {
+    id: 'roxo',
+    name: 'Roxo',
+    hexColor: '#8B09AC',
+    description: 'Na psicologia das cores, o roxo está ligado ao mistério, à espiritualidade e à introspecção. Ele representa o encontro entre o vermelho (paixão, energia) e o azul (tranquilidade, razão), simbolizando equilíbrio entre emoção e mente. É a cor da imaginação, da intuição e do poder simbólico, frequentemente associada ao sagrado, ao sonho e ao inconsciente. Contudo, quando o roxo se intensifica ou escurece, pode adquirir conotações de isolamento, melancolia ou obsessão, tornando-se uma cor de transição, entre o visível e o oculto, o real e o espiritual.',
+    movies: [
+      {
+        id: 'pantera-negra',
+        title: "pantera negra (2018)",
+        image: '/movies/pantera-negra.png',
+        colorExplanation: 'Na cena iluminada pelas auroras roxas do plano ancestral, o roxo traduz a conexão entre o espiritual e o terreno. A cor envolve o protagonista num ambiente sereno e transcendente, marcando o reencontro com seus antepassados. Aqui, o roxo é a cor da ancestralidade e da energia vital, funcionando como ponte entre mundos, o dos vivos e o dos mortos, o do presente e o da memória. É uma tonalidade que irradia respeito e poder, mas também paz e continuidade. O brilho etéreo do céu roxo faz do espaço uma espécie de útero cósmico, onde o herói renasce espiritualmente, carregando a força de seu povo.'
+      },
+        {
+        id: 'guardioes-da-galaxia',
+        title: 'Guardiões da Galáxia (2014)',
+        image: '/movies/guardioes-da-galaxia.png',
+        colorExplanation: 'Neste momento de união e sacrifício, o roxo assume um tom explosivo e energético, representando o poder e o risco da conexão. É a cor do infinito, do cósmico, a energia que ultrapassa os limites humanos. O roxo, aqui, simboliza tanto a destruição quanto a transcendência: é a matéria do universo e o elo entre os guardiões. A intensidade da cor revela a fusão entre seus corpos e almas, marcando o instante em que o grupo se torna uma unidade. O brilho violento e pulsante do roxo expressa a dualidade da cor, é belo e perigoso, espiritual e atômico, vida e morte coexistindo num mesmo instante.'
+      },
+      {
+        id: 'coraline',
+        title: 'Coraline e o Mundo Secreto (2009)',
+        image: '/movies/coraline-rosa.png',
+        colorExplanation: 'Em Coraline, o roxo é o tom do estranho e do sedutor, o fio que separa o mundo real do mundo ilusório. Nas cenas da “outra mãe”, o roxo domina com sua atmosfera misteriosa e onírica, envolvendo o perigo em um manto de fascínio. A cor aqui é armadilha e encanto: desperta curiosidade, mas carrega algo sombrio. O roxo funciona como a cor do limiar, nem luz nem escuridão, o espaço ambíguo onde o belo se mistura ao assustador. Ele traduz a tentação do sonho perfeito que, aos poucos, se revela pesadelo.'
+      }
+    ]
+  },
+  {
+    id: 'marrom',
+    name: 'Marrom',
+    hexColor: '#7C580B',
+    description: 'Na psicologia das cores, o marrom é uma cor muito rica em significados ligados à terra, segurança e realidade concreta. Ele transmite sensações de estabilidade, conforto e responsabilidade, mas também pode carregar nuances de melancolia ou rigidez, dependendo do contexto.',
+    movies: [
+      {
+        id: 'oppenheimer',
+        title: "Oppenheimer (2023)",
+        image: '/movies/oppenheimer.png',
+        colorExplanation: 'O marrom na cena do trem de Oppenheimer traduz o peso moral e histórico das decisões sendo discutidas. Ele cria uma atmosfera fechada, quente e densa, simbolizando a culpa, a responsabilidade e a materialidade daquilo que Oppenheimer começa a construir. É uma cor de terra e carne, lembrando o espectador de que, por trás da teoria e da ciência, há humanidade, falibilidade e consequência.'
+      },
+        {
+        id: 'grande-hotel-budapeste-marrom',
+        title: 'O Grande Hotel Budapeste (2014)',
+        image: '/movies/grande-hotem-budapeste-marrom.png',
+        colorExplanation: 'Wes Anderson trabalha com paletas cuidadosamente orquestradas, e o marrom aqui é a base neutra que equilibra os contrastes entre cores mais saturadas (como o azul do personagem à esquerda e o cinza-claro do personagem à direita). O marrom, sendo um tom quente e terroso, cria: uma atmosfera nostálgica, remetendo ao passado (a era de ouro do hotel); uma sensação de decadência elegante, já que o ambiente parece luxuoso, mas desgastado; uma textura emocional de estabilidade e memória;  O marrom é a cor da madeira, do antigo, do que tem história.'  
+      },
+      {
+        id: 'django',
+        title: 'DJANGO LIVRE (2012)',
+        image: '/movies/django.png',
+        colorExplanation: 'O marrom em Django Livre simboliza o luxo corrupto e o poder brutal. Ele não acolhe, ele domina. A paleta quente transforma a cena em um retrato de violência mascarada por civilização, um calor dourado que queima por dentro. O ambiente e as cores são, juntos, o espelho da vaidade e crueldade refinada de Calvin Candie.'
+      }
+    ]
+  },
+  {
+    id: 'branco',
+    name: 'Branco',
+    hexColor: '#FFFFFF',
+    description: 'Na psicologia das cores, o branco está ligado à pureza, paz e renovação. Ele representa o início e o fim, o vazio e a possibilidade, uma tela em branco onde tudo pode ser criado. É a cor da luz total, associada à espiritualidade, à verdade e à transcendência. Porém, em excesso, o branco também pode transmitir frieza, isolamento e esterilidade, tornando-se um símbolo da ausência de emoção ou da anulação do sujeito diante do infinito. É uma cor paradoxal: tanto presença absoluta quanto apagamento, um espaço entre o ser e o desaparecer.',
+    movies: [
+      {
+        id: 'blade-branco',
+        title: "blade runner 2049 (2017)",
+        image: '/movies/blade-branco.png',
+        colorExplanation: 'Nesta cena final, o branco da neve cobre o personagem em um silêncio absoluto, dissolvendo-o no ambiente. A cor, aqui, não é pureza, mas esvaziamento: o branco do fim, da entrega, da aceitação da morte. A neve envolve o corpo como um lençol fúnebre, simbolizando a paz alcançada apenas na dissolução do eu. O contraste entre o corpo escuro e o chão branco evidencia o apagamento do homem diante do mundo, um gesto de reconciliação e rendição. O branco não é esperança, mas transcendência melancólica, o instante em que o humano se torna memória no espaço gelado do futuro.'
+      },
+        {
+        id: 'interestelar',
+        title: 'interestelar (2014)',
+        image: '/movies/interestelar.png',
+        colorExplanation: 'No planeta gelado, o branco é o símbolo da solidão cósmica e da infinitude. É o branco do desconhecido, da ciência em seu limite, uma cor que ao mesmo tempo purifica e ameaça. A paisagem branca e desolada parece suspender o tempo, confrontando o personagem com o vazio do universo e de si mesmo. O branco aqui é existencial, não celestial: representa a busca pelo sentido em meio ao nada, a tentativa humana de encontrar calor e fé no gelo do infinito. É a cor do absoluto, o espaço onde a razão e a emoção se encontram e se desfazem diante da vastidão.'  
+      },
+      {
+        id: 'todo-poderoso',
+        title: 'TODO PODEROSO (2003)',
+        image: '/movies/deus-branco.png',
+        colorExplanation: 'No espaço branco onde Bruce encontra Deus, o branco simboliza luz, perdão e recomeço. É um branco espiritual, envolto em serenidade, que remete à iluminação e à reconciliação consigo mesmo. Aqui, o branco não apaga, ele revela. A ausência de cor é também a presença do divino, o ambiente onde tudo se torna claro e possível. O tom suave e radiante expressa a purificação interior do personagem, o momento em que o humano se encontra com o sagrado e entende o valor da humildade.'
+      }
+    ]
+  },
+  {
+    id: 'preto',
+    name: 'Preto',
+    hexColor: '#0D0E0E',
+    description: 'Na psicologia das cores, o preto está associado à profundidade, poder, mistério e limite. É a cor do desconhecido, do silêncio absoluto, mas também da força interior e da resistência. Representa tanto o vazio quanto a concentração máxima de energia, podendo evocar elegância e autoridade, mas também medo, isolamento e morte simbólica. O preto é a cor da transformação, do que se dissolve para renascer. Ele marca o espaço entre o fim e o início, entre a dor e o renascimento, é a cor da introspecção extrema, onde a luz ainda não chegou, mas está prestes a surgir.',
+    movies: [
+      {
+        id: 'batson',
+        title: "THe batman (2022)",
+        image: '/movies/batson.png',
+        colorExplanation: 'O preto domina o universo de The Batman, não apenas como estética, mas como expressão psicológica. O herói emerge da escuridão não para escondê-la, mas porque ela é sua morada emocional. Aqui, o preto traduz luto e busca, a tentativa de controlar o caos interno através do anonimato. O rosto coberto, o olhar em meio à sombra, e a maquiagem borrada sugerem um personagem que se confunde com a própria noite. Na psicologia das cores, esse preto é o do trauma, o da ausência de luz que molda a identidade. Ele não é vazio, mas densidade, um escudo simbólico contra o desamparo. É o peso da dor transformado em armadura.'
+      },
+        {
+        id: 'interestelar-preto',
+        title: 'interestelar (2014)',
+        image: '/movies/interestelar-preto.png',
+        colorExplanation: 'No interior do buraco negro, o preto é a imagem do desconhecido absoluto, o limite entre o espaço e o tempo, entre o humano e o cósmico. A cor aqui não representa destruição, mas transcendência: o momento em que o personagem se entrega ao invisível e confia no desconhecido para encontrar a verdade. O preto é o útero do universo, um vazio criador. Ele simboliza o colapso e o nascimento simultâneo, a fusão entre ciência e fé. Dentro dessa escuridão total, tudo parece desaparecer, mas é nela que o sentido se recria.'  
+      },
+      {
+        id: 'darko',
+        title: 'Donnie Darko (2001)',
+        image: '/movies/darko.png',
+        colorExplanation: 'Em Donnie Darko, o preto envolve a narrativa como uma névoa de mistério e angústia existencial. Ele colore o mundo de sonhos, delírios e premonições, onde o tempo se distorce e a morte se torna uma presença íntima. O preto é a cor do subconsciente que desperta, o véu entre a realidade e o delírio, entre o ser e o deixar de ser. O coelho metálico e as sombras reforçam a sensação de que algo está por trás daquilo que se vê. Aqui, o preto não é apenas medo: é pressentimento, o chamado do desconhecido que revela o destino. É a cor da pergunta sem resposta, do mergulho interior que consome e transforma.'
+      }
+    ]
   }
 ];
