@@ -7,7 +7,7 @@ interface ColorData {
   name: string;
   hex: string;
   angle: number; // Ângulo na roda (0-360)
-  gifPath?: string; // Caminho para o GIF correspondente
+  gifPaths?: string[]; // Array de caminhos para os GIFs correspondentes
 }
 
 interface ColorWheelProps {
@@ -18,26 +18,52 @@ interface ColorWheelProps {
 
 // Ordem correta seguindo o conic-gradient
 const colors: ColorData[] = [
-  { name: 'Vermelho', hex: '#FF0000', angle: 0, gifPath: '/gifs/red.gif' },      // 0-36deg
-  { name: 'Laranja', hex: '#FF8C00', angle: 36, gifPath: '/gifs/orange.gif' },      // 36-72deg
-  { name: 'Amarelo', hex: '#FFD700', angle: 72, gifPath: '/gifs/yellow.gif' },      // 72-108deg
-  { name: 'Verde', hex: '#00AA55', angle: 108, gifPath: '/gifs/green.gif' },       // 108-144deg
-  { name: 'Marrom', hex: '#8B4513', angle: 144, gifPath: '/gifs/brown.gif' },      // 144-180deg
-  { name: 'Azul', hex: '#0066FF', angle: 180, gifPath: '/gifs/blue.gif' },        // 180-216deg
-  { name: 'Branco', hex: '#FFFFFF', angle: 216, gifPath: '/gifs/white.gif' },      // 216-252deg
-  { name: 'Roxo', hex: '#9B59B6', angle: 252, gifPath: '/gifs/purple.gif' },        // 252-288deg
-  { name: 'Preto', hex: '#2C2C2C', angle: 288, gifPath: '/gifs/black.gif' },       // 288-324deg
-  { name: 'Rosa', hex: '#FF69B4', angle: 324, gifPath: '/gifs/pink.gif' }         // 324-360deg
+  { name: 'Vermelho', hex: '#FF0000', angle: 0, gifPaths: ['/gifs/red.gif', '/gifs/red2.gif', '/gifs/red3.gif'] },      // 0-36deg
+  { name: 'Laranja', hex: '#FF8C00', angle: 36, gifPaths: ['/gifs/orange.gif', '/gifs/orange2.gif', '/gifs/orange3.gif'] },      // 36-72deg
+  { name: 'Amarelo', hex: '#FFD700', angle: 72, gifPaths: ['/gifs/yellow.gif', '/gifs/yellow2.gif', '/gifs/yellow3.gif'] },      // 72-108deg
+  { name: 'Verde', hex: '#00AA55', angle: 108, gifPaths: ['/gifs/green.gif', '/gifs/green2.webp', '/gifs/green3.gif'] },       // 108-144deg
+  { name: 'Marrom', hex: '#8B4513', angle: 144, gifPaths: ['/gifs/brown.gif', '/gifs/brown2.gif', '/gifs/brown3.gif'] },      // 144-180deg
+  { name: 'Azul', hex: '#0066FF', angle: 180, gifPaths: ['/gifs/blue.gif', '/gifs/blue2.gif', '/gifs/blue3.gif'] },        // 180-216deg
+  { name: 'Branco', hex: '#FFFFFF', angle: 216, gifPaths: ['/gifs/white.gif', '/gifs/white2.gif', '/gifs/white3.gif'] },      // 216-252deg
+  { name: 'Roxo', hex: '#9B59B6', angle: 252, gifPaths: ['/gifs/purple.gif', '/gifs/purple2.gif', '/gifs/purple3.gif'] },        // 252-288deg
+  { name: 'Preto', hex: '#2C2C2C', angle: 288, gifPaths: ['/gifs/black.gif', '/gifs/black2.gif', '/gifs/black3.gif'] },       // 288-324deg
+  { name: 'Rosa', hex: '#FF69B4', angle: 324, gifPaths: ['/gifs/pink.gif', '/gifs/pink2.gif', '/gifs/pink3.gif'] }         // 324-360deg
 ];
 
 export default function ColorWheel({ onColorHover, onColorClick, isTransitioning }: ColorWheelProps) {
   const router = useRouter();
   const [hoveredColor, setHoveredColor] = useState<string | null>(null);
+  const [selectedGif, setSelectedGif] = useState<string | null>(null);
+  // Rastreia o índice atual do GIF para cada cor
+  const [gifIndices, setGifIndices] = useState<Record<string, number>>({});
 
   const handleColorHover = (colorName: string | null) => {
     setHoveredColor(colorName);
-    const color = colorName ? colors.find(c => c.name === colorName) : null;
-    onColorHover?.(color?.hex || null);
+    if (colorName) {
+      const color = colors.find(c => c.name === colorName);
+      if (color?.gifPaths && color.gifPaths.length > 0) {
+        // Pega o índice atual da cor (ou -1 se não existir, para começar do 0 na primeira vez)
+        const currentIndex = gifIndices[colorName] ?? -1;
+        // Avança para o próximo GIF (circular usando módulo)
+        // Se currentIndex é -1, nextIndex será 0 (primeiro GIF)
+        const nextIndex = (currentIndex + 1) % color.gifPaths.length;
+        
+        // Mostra o GIF no próximo índice
+        setSelectedGif(color.gifPaths[nextIndex]);
+        
+        // Atualiza o índice para a próxima vez que a cor for hoverada
+        setGifIndices(prev => ({
+          ...prev,
+          [colorName]: nextIndex
+        }));
+      } else {
+        setSelectedGif(null);
+      }
+      onColorHover?.(color?.hex || null);
+    } else {
+      setSelectedGif(null);
+      onColorHover?.(null);
+    }
   };
 
   const handleColorClick = (colorName: string) => {
@@ -102,16 +128,17 @@ export default function ColorWheel({ onColorHover, onColorClick, isTransitioning
             
           >
             {/* GIF da cor em hover */}
-            {hoveredColor && colors.find(c => c.name === hoveredColor)?.gifPath && (
+            {hoveredColor && selectedGif && (
               <div className="absolute inset-0 animate-fade-in">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={colors.find(c => c.name === hoveredColor)?.gifPath}
+                  src={selectedGif}
                   alt={`${hoveredColor} GIF`}
                   className="w-full h-full object-cover"
                   style={{
                     animation: 'fadeIn 0.8s ease-in-out'
                   }}
+                  key={selectedGif} // Força re-render quando o GIF muda
                 />
               </div>
             )}
