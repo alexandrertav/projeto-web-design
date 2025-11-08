@@ -117,5 +117,31 @@ export const colorsData: ColorData[] = [
         colorExplanation: 'O amarelo nessa cena assume um papel profundamente perturbador e irônico, subvertendo seu significado tradicional na psicologia das cores. Normalmente associado à luz, alegria e vitalidade, aqui ele é usado de forma opressiva e claustrofóbica, refletindo o colapso psicológico do personagem e o ambiente cada vez mais insano do hotel. A tonalidade amarelada das paredes e da porta cria uma sensação de decadência e desconforto, intensificada pela iluminação artificial. O amarelo não é aqui o símbolo da vida, mas da loucura e da  eterioração mental, uma luz que, em vez de iluminar, consome e sufoca. Essa inversão de sentido é uma das marcas visuais mais poderosas do filme: o que deveria transmitir calor e segurança se torna sinônimo de ameaça e descontrole. O amarelo transforma o espaço doméstico em um cenário de terror psicológico, onde a normalidade se dissolve em histeria. Assim, o uso da cor amplifica o horror sem precisar recorrer à escuridão: é o brilho do delírio que revela o verdadeiro terror, a insanidade surgindo sob uma aparência banal e familiar.'
       }
     ]
+  },
+  {
+    id: 'laranja',
+    name: 'Laranja',
+    hexColor: '#D57C00',
+    description: 'Na psicologia das cores, o laranja é uma cor associada à energia, entusiasmo e sociabilidade. Ele combina a vitalidade do vermelho com o otimismo do amarelo, resultando em uma tonalidade que transmite calor, criatividade e movimento.',
+    movies: [
+      {
+        id: 'blade-laranja',
+        title: "blade runner 2049 (2017)",
+        image: '/movies/blade-laranja.png',
+        colorExplanation: 'O laranja nessa cena é utilizado de forma profundamente simbólica e atmosférica, evocando tanto calor e vitalidade quanto decadência e isolamento. Diferente de seu uso tradicional como cor energética e acolhedora, aqui o laranja é reinterpretado para criar uma ambiência distópica e opressiva, típica do universo de Blade Runner 2049. Do ponto de vista da psicologia das cores, o laranja é o resultado da fusão entre o vermelho (paixão, perigo, intensidade) e o amarelo (luz, racionalidade, vida). Na cena, essa mistura se transforma em um nevoeiro denso, que envolve o personagem e o espaço, sugerindo um mundo sufocante e sem horizonte claro, uma paisagem emocionalmente árida, onde a energia do laranja se esgota em desolação. Visualmente, o tom laranja cria uma atmosfera de calor tóxico e artificial, remetendo à poluição, à radiação ou a um pôr do sol eterno, metáforas visuais de um planeta que perdeu sua vitalidade natural. O contraste entre a cor vibrante e a solidão da figura humana no centro da imagem reforça a ideia de existência sem essência, um tema recorrente no filme. Assim, o laranja aqui não é o símbolo da vida, mas da ruína da humanidade, uma luz que resta quando o mundo natural e emocional já foi consumido. É o crepúsculo do humano, onde o calor da cor se torna um eco distante daquilo que um dia foi a chama da vida.'
+      },
+        {
+        id: 'whiplash',
+        title: 'Whiplash: Em Busca da Perfeição (2014)',
+        image: '/movies/whiplash.png',
+        colorExplanation: 'O laranja nessa cena tem um papel emocional e simbólico crucial, traduzindo visualmente a intensidade, o sacrifício e a paixão abrasadora do protagonista. Na psicologia das cores, o laranja representa energia, ambição e transformação, características que definem o percurso emocional do músico em busca da perfeição. A luz quente que domina o enquadramento reflete o calor do palco e o fogo interior do personagem, sugerindo tanto o brilho do sucesso quanto o esgotamento físico e mental que o acompanha. É uma cor que pulsa, vibrante, como o ritmo do jazz, uma extensão visual do próprio som da bateria. Ao mesmo tempo, o laranja aqui também evoca uma tensão emocional constante: o limite entre a inspiração e a exaustão, entre o triunfo e o colapso. A iluminação cria uma atmosfera quase febril, onde o artista é consumido pela própria chama que o impulsiona. Assim, o laranja funciona como uma metáfora visual do esforço extremo, o calor do talento levado ao ponto de combustão, onde o brilho do palco se confunde com o fogo da obsessão'
+      },
+      {
+        id: 'mars',
+        title: 'perdido em marte (2015)',
+        image: '/movies/mars.png',
+        colorExplanation: 'O laranja nessa cena é usado de forma simbólica para expressar tanto a hostilidade quanto a vitalidade do ambiente marciano. Na psicologia das cores, o laranja é a cor da energia, resistência e sobrevivência, e aqui, ele se torna um reflexo direto da luta do protagonista para se manter vivo em um mundo árido e inóspito. A paisagem alaranjada de Marte cria uma atmosfera de isolamento absoluto, transmitindo o calor extremo, a falta de vida e a distância da Terra. Contudo, essa mesma cor também carrega uma força simbólica de esperança e superação: o laranja representa a chama que ainda arde, mesmo em meio ao deserto e à solidão. Visualmente, o contraste entre o tom quente do cenário e o traje do astronauta reforça a tensão entre fragilidade humana e imensidão cósmica. O ambiente é opressivo, mas também vibrante, como se o planeta, apesar de hostil, pulsasse com uma energia primitiva, quase espiritual. Assim, o uso do laranja equilibra desespero e vitalidade: é a cor do perigo, mas também da persistência, simbolizando o calor da vida humana resistindo contra um universo indiferente.'
+      }
+    ]
   }
 ];
