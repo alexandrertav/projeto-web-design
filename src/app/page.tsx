@@ -1,6 +1,8 @@
 'use client';
 
-import { Palette, Sparkles, Film } from 'lucide-react';
+import { LoaderPinwheel } from '@/components/animate-ui/icons/loader-pinwheel';
+import { Clapperboard } from '@/components/animate-ui/icons/clapperboard';
+import { Sparkles } from '@/components/animate-ui/icons/sparkles';
 import ColorWheel from './components/color-wheel';
 import { useState, useEffect } from 'react';
 
@@ -141,7 +143,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(168, 85, 247, 0.3)'
                   }}
                 >
-                  <Palette className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <LoaderPinwheel animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Teoria das Cores</h3>
@@ -164,7 +166,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(59, 130, 246, 0.3)'
                   }}
                 >
-                  <Film className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <Clapperboard animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Cinema & Arte</h3>
@@ -187,7 +189,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(236, 72, 153, 0.3)'
                   }}
                 >
-                  <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <Sparkles animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Análise Visual</h3>
