@@ -12,6 +12,8 @@ interface ColorData {
 
 interface ColorWheelProps {
   onColorHover?: (color: string | null) => void;
+  onColorClick?: (colorName: string, colorHex: string) => void;
+  isTransitioning?: boolean;
 }
 
 // Ordem correta seguindo o conic-gradient
@@ -28,7 +30,7 @@ const colors: ColorData[] = [
   { name: 'Rosa', hex: '#FF69B4', angle: 324, gifPath: '/gifs/pink.gif' }         // 324-360deg
 ];
 
-export default function ColorWheel({ onColorHover }: ColorWheelProps) {
+export default function ColorWheel({ onColorHover, onColorClick, isTransitioning }: ColorWheelProps) {
   const router = useRouter();
   const [hoveredColor, setHoveredColor] = useState<string | null>(null);
 
@@ -36,6 +38,19 @@ export default function ColorWheel({ onColorHover }: ColorWheelProps) {
     setHoveredColor(colorName);
     const color = colorName ? colors.find(c => c.name === colorName) : null;
     onColorHover?.(color?.hex || null);
+  };
+
+  const handleColorClick = (colorName: string) => {
+    const color = colors.find(c => c.name === colorName);
+    if (color && onColorClick) {
+      onColorClick(color.name, color.hex);
+      // Navega após a animação (2.5s)
+      setTimeout(() => {
+        router.push(`/color/${color.name.toLowerCase()}`);
+      }, 2500);
+    } else {
+      router.push(`/color/${colorName.toLowerCase()}`);
+    }
   };
 
   const numColors = colors.length;
@@ -73,6 +88,7 @@ export default function ColorWheel({ onColorHover }: ColorWheelProps) {
             )`,
             transform: `rotate(-18deg)`, // Ajuste para alinhar vermelho no topo
             filter: hoveredColor ? 'brightness(1.15) saturate(1.2)' : 'brightness(1)',
+            animation: isTransitioning ? 'spinWheel 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards' : 'none',
           }}
         >
           {/* Círculo branco central */}
@@ -135,7 +151,7 @@ export default function ColorWheel({ onColorHover }: ColorWheelProps) {
               return (
                 <button
                   key={color.name}
-                  onClick={() => router.push(`/color/${color.name.toLowerCase()}`)}
+                  onClick={() => handleColorClick(color.name)}
                   onMouseEnter={() => handleColorHover(color.name)}
                   onMouseLeave={() => handleColorHover(null)}
                   className="absolute inset-0 transition-all duration-300 cursor-pointer"
@@ -145,6 +161,7 @@ export default function ColorWheel({ onColorHover }: ColorWheelProps) {
                     zIndex: isHovered ? 25 : 15,
                   }}
                   aria-label={color.name}
+                  disabled={isTransitioning}
                 >
                 </button>
               );

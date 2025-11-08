@@ -1,12 +1,24 @@
 'use client';
 
-import { Palette, Sparkles, Film } from 'lucide-react';
+import { LoaderPinwheel } from '@/components/animate-ui/icons/loader-pinwheel';
+import { Clapperboard } from '@/components/animate-ui/icons/clapperboard';
+import { Sparkles } from '@/components/animate-ui/icons/sparkles';
 import ColorWheel from './components/color-wheel';
+import ConcentricBackground from './components/concentric-background';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [hoveredColor, setHoveredColor] = useState<string | null>(null);
   const [colorIntensity, setColorIntensity] = useState(0);
+  const [transitionState, setTransitionState] = useState<{
+    isAnimating: boolean;
+    color: string | null;
+    colorHex: string | null;
+  }>({
+    isAnimating: false,
+    color: null,
+    colorHex: null,
+  });
 
   // Aumenta a intensidade da cor gradualmente enquanto hover está ativo
   useEffect(() => {
@@ -141,7 +153,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(168, 85, 247, 0.3)'
                   }}
                 >
-                  <Palette className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <LoaderPinwheel animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Teoria das Cores</h3>
@@ -164,7 +176,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(59, 130, 246, 0.3)'
                   }}
                 >
-                  <Film className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <Clapperboard animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Cinema & Arte</h3>
@@ -187,7 +199,7 @@ export default function Home() {
                     backgroundColor: hoveredColor ? `${hoveredColor}40` : 'rgba(236, 72, 153, 0.3)'
                   }}
                 >
-                  <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
+                  <Sparkles animate loop className="w-4 sm:w-5 h-4 sm:h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base text-white/95 font-semibold mb-0.5 sm:mb-1">Análise Visual</h3>
@@ -218,9 +230,122 @@ export default function Home() {
 
         {/* Lado Direito - Roda Cromática */}
         <div className="flex items-center justify-center px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-12 lg:py-20 animate-fade-in-up order-2 lg:order-2 min-h-[350px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-0" style={{ animationDelay: '0.2s' }}>
-          <ColorWheel onColorHover={setHoveredColor} />
+          <ColorWheel 
+            onColorHover={setHoveredColor} 
+            onColorClick={(colorName, colorHex) => {
+              setTransitionState({
+                isAnimating: true,
+                color: colorName,
+                colorHex: colorHex,
+              });
+            }}
+            isTransitioning={transitionState.isAnimating}
+          />
         </div>
       </main>
+
+      {/* Overlay de transição de cor - Espiral com Concentric Background */}
+      {transitionState.isAnimating && transitionState.colorHex && (
+        <div
+          className="fixed inset-0 z-[9999] pointer-events-none"
+        >
+          {/* Camadas concêntricas em espiral */}
+          <div
+            className="absolute inset-0 flex items-center justify-center"
+            style={{
+              opacity: 1,
+              animation: 'fadeOut 0.5s ease-out forwards',
+              animationDelay: '2s',
+            }}
+          >
+            {/* Camada 1 - Centro */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: '200px',
+                height: '200px',
+                background: `radial-gradient(circle, ${transitionState.colorHex}90 0%, ${transitionState.colorHex}50 50%, transparent 100%)`,
+                transform: 'scale(0) rotate(0deg)',
+                animation: 'spiralLayer1 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards',
+                boxShadow: `inset 0 0 60px ${transitionState.colorHex}40`,
+              }}
+            />
+            
+            {/* Camada 2 */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: '400px',
+                height: '400px',
+                background: `radial-gradient(circle, transparent 30%, ${transitionState.colorHex}80 45%, ${transitionState.colorHex}40 65%, transparent 100%)`,
+                transform: 'scale(0) rotate(0deg)',
+                animation: 'spiralLayer2 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards',
+                animationDelay: '0.1s',
+              }}
+            />
+            
+            {/* Camada 3 */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: '700px',
+                height: '700px',
+                background: `radial-gradient(circle, transparent 35%, ${transitionState.colorHex}70 48%, ${transitionState.colorHex}30 68%, transparent 100%)`,
+                transform: 'scale(0) rotate(0deg)',
+                animation: 'spiralLayer3 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards',
+                animationDelay: '0.2s',
+              }}
+            />
+            
+            {/* Camada 4 */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: '1100px',
+                height: '1100px',
+                background: `radial-gradient(circle, transparent 40%, ${transitionState.colorHex}60 52%, ${transitionState.colorHex}25 72%, transparent 100%)`,
+                transform: 'scale(0) rotate(0deg)',
+                animation: 'spiralLayer4 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards',
+                animationDelay: '0.3s',
+              }}
+            />
+            
+            {/* Camada 5 - Externa */}
+            <div
+              className="absolute rounded-full"
+              style={{
+                width: '1600px',
+                height: '1600px',
+                background: `radial-gradient(circle, transparent 42%, ${transitionState.colorHex}50 55%, ${transitionState.colorHex}20 75%, transparent 100%)`,
+                transform: 'scale(0) rotate(0deg)',
+                animation: 'spiralLayer5 2.5s cubic-bezier(0.1, 0.3, 0.9, 1) forwards',
+                animationDelay: '0.4s',
+              }}
+            />
+            
+            {/* Textura granulada */}
+            <div 
+              className="absolute inset-0 opacity-30 mix-blend-overlay"
+              style={{
+                backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' seed='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.5'/%3E%3C/svg%3E")`,
+                backgroundSize: '150px 150px',
+                animation: 'fadeIn 0.5s ease-in forwards',
+              }}
+            />
+          </div>
+          
+          {/* Concentric Background que aparece depois */}
+          <div
+            style={{
+              opacity: 0,
+              animation: 'fadeInBackground 0.5s ease-in forwards',
+              animationDelay: '1.8s',
+            }}
+          >
+            <ConcentricBackground color={transitionState.colorHex} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
