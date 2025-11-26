@@ -10,6 +10,15 @@ interface MovieCardProps {
   colorData: ColorData;
 }
 
+// Ajusta cores muito escuras para melhor contraste
+function adjustDarkColor(hex: string): string {
+  const colorMap: Record<string, string> = {
+    '#0D0E0E': '#B0B0B0', // Preto → Cinza médio-claro (mantém sensação escura mas legível)
+    '#7C580B': '#C9A068', // Marrom → Marrom claro
+  };
+  return colorMap[hex.toUpperCase()] || hex;
+}
+
 export default function MovieCard({ movie, accentColor, colorData }: MovieCardProps) {
   return (
     <article className="relative overflow-hidden rounded-3xl backdrop-blur-sm bg-black/20 border border-white/10 group p-6 sm:p-8">
@@ -34,7 +43,7 @@ export default function MovieCard({ movie, accentColor, colorData }: MovieCardPr
           <Film 
             className="w-6 h-6" 
             style={{ 
-              color: accentColor,
+              color: adjustDarkColor(accentColor),
               filter: `drop-shadow(0 0 6px ${accentColor})`
             }}
           />
@@ -79,7 +88,7 @@ export default function MovieCard({ movie, accentColor, colorData }: MovieCardPr
               <span 
                 className="font-bold text-lg"
                 style={{ 
-                  color: accentColor,
+                  color: adjustDarkColor(accentColor),
                   textShadow: `0 0 20px ${accentColor}40`
                 }}
               >

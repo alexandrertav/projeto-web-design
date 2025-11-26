@@ -4,6 +4,15 @@ interface ColorHeaderProps {
   description: string;
 }
 
+// Ajusta cores muito escuras para melhor contraste
+function adjustDarkColor(hex: string): string {
+  const colorMap: Record<string, string> = {
+    '#0D0E0E': '#B0B0B0', // Preto → Cinza médio-claro
+    '#7C580B': '#C9A068', // Marrom → Marrom claro
+  };
+  return colorMap[hex.toUpperCase()] || hex;
+}
+
 export default function ColorHeader({ 
   name, 
   hexColor, 
@@ -56,7 +65,7 @@ export default function ColorHeader({
             <h1 
               className="text-6xl sm:text-7xl md:text-8xl font-light tracking-tight leading-none"
               style={{ 
-                color: hexColor,
+                color: adjustDarkColor(hexColor),
                 textShadow: `0 0 60px ${hexColor}40, 0 0 30px ${hexColor}30`,
                 fontFamily: 'var(--font-montserrat)'
               }}
@@ -85,7 +94,7 @@ export default function ColorHeader({
               <span 
                 className="font-medium"
                 style={{ 
-                  color: hexColor,
+                  color: adjustDarkColor(hexColor),
                   filter: `drop-shadow(0 0 10px ${hexColor}40)`,
                   fontFamily: 'var(--font-montserrat), "Montserrat", sans-serif'
                 }}
