@@ -58,7 +58,7 @@ export default function ColorHeader({
               style={{ 
                 color: hexColor,
                 textShadow: `0 0 60px ${hexColor}40, 0 0 30px ${hexColor}30`,
-                fontFamily: 'var(--font-geist-sans)'
+                fontFamily: 'var(--font-montserrat)'
               }}
             >
               {name}
@@ -78,12 +78,16 @@ export default function ColorHeader({
 
           {/* Descrição com tipografia refinada */}
           <div className="max-w-3xl">
-            <p className="text-lg sm:text-xl leading-relaxed text-white/80 font-light">
+            <p 
+              className="text-lg sm:text-xl leading-relaxed text-white/80 font-light"
+              style={{ fontFamily: 'var(--font-playfair), "Playfair Display", serif' }}
+            >
               <span 
                 className="font-medium"
                 style={{ 
                   color: hexColor,
-                  filter: `drop-shadow(0 0 10px ${hexColor}40)`
+                  filter: `drop-shadow(0 0 10px ${hexColor}40)`,
+                  fontFamily: 'var(--font-montserrat), "Montserrat", sans-serif'
                 }}
               >
                 O {name.toLowerCase()}
