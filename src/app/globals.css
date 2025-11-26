@@ -231,6 +231,7 @@ body {
 
 /* Estilos para páginas de cores */
 .color-name {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(2.25rem, 5vw, 3rem);
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -239,6 +240,7 @@ body {
 }
 
 .movie-title {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: clamp(1.5rem, 3vw, 1.875rem);
   font-weight: bold;
   margin-bottom: 1.5rem;
@@ -248,10 +250,13 @@ body {
 }
 
 .movie-description {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   line-height: 1.75;
   color: #d1d5db;
-  text-align: justify;
+  text-align: left;
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 /* Rotation */

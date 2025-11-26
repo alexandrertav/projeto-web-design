@@ -36,6 +36,7 @@ export default async function ColorPage({
         <MovieGrid 
           movies={colorData.movies}
           colorHex={colorData.hexColor}
+          colorData={colorData}
         />
       </main>
     </>

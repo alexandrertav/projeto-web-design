@@ -1,13 +1,14 @@
-import { Movie } from '@/app/data/colors';
+import { Movie, ColorData } from '@/app/data/colors';
 import MovieCard from './movie-card';
 import { Film } from 'lucide-react';
 
 interface MovieGridProps {
   movies: Movie[];
   colorHex: string;
+  colorData: ColorData;
 }
 
-export default function MovieGrid({ movies, colorHex }: MovieGridProps) {
+export default function MovieGrid({ movies, colorHex, colorData }: MovieGridProps) {
   return (
     <section className="relative z-10 mt-12">
       {/* Header da seção */}
@@ -31,6 +32,7 @@ export default function MovieGrid({ movies, colorHex }: MovieGridProps) {
             key={movie.id}
             movie={movie}
             accentColor={colorHex}
+            colorData={colorData}
           />
         ))}
       </div>

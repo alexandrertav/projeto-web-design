@@ -1,17 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import { Movie } from '@/app/data/colors';
+import { Movie, ColorData } from '@/app/data/colors';
 import { Film } from 'lucide-react';
 
 interface MovieCardProps {
   movie: Movie;
   accentColor: string;
+  colorData: ColorData;
 }
 
-export default function MovieCard({ movie, accentColor }: MovieCardProps) {
+export default function MovieCard({ movie, accentColor, colorData }: MovieCardProps) {
   return (
-    <article className="glass-card p-6 sm:p-8 group">
+    <article className="relative overflow-hidden rounded-3xl backdrop-blur-sm bg-black/20 border border-white/10 group p-6 sm:p-8">
       {/* Linha de acento */}
       <div 
         className="absolute top-0 left-0 w-full h-1"
@@ -71,18 +72,24 @@ export default function MovieCard({ movie, accentColor }: MovieCardProps) {
       </div>
 
       {/* Descrição */}
-      <p className="movie-description">
-        <span 
-          className="font-bold text-lg"
-          style={{ 
-            color: accentColor,
-            textShadow: `0 0 20px ${accentColor}40`
-          }}
-        >
-          A cor
-        </span>{' '}
-        {movie.colorExplanation}
-      </p>
+      <div className="space-y-4">
+        {movie.colorExplanation.split('\n\n').map((paragraph, index) => (
+          <p key={index} className="movie-description">
+            {index === 0 && (
+              <span 
+                className="font-bold text-lg"
+                style={{ 
+                  color: accentColor,
+                  textShadow: `0 0 20px ${accentColor}40`
+                }}
+              >
+                O {colorData.name.toLowerCase()}
+              </span>
+            )}
+            {index === 0 ? ' ' : ''}{paragraph}
+          </p>
+        ))}
+      </div>
     </article>
   );
 }
